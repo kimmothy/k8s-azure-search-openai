@@ -42,7 +42,7 @@ source <(azd env get-values)
 ```bash
 az aks update --resource-group "${AZURE_RESOURCE_GROUP}" --name "${AZURE_AKS_CLUSTER_NAME}" --enable-oidc-issuer --enable-workload-identity
 
-USER_ASSIGNED_IDENTITY_NAME=workloadid
+USER_ASSIGNED_IDENTITY_NAME=workloadidchan
 
 export AKS_OIDC_ISSUER="$(az aks show --name "${AZURE_AKS_CLUSTER_NAME}" --resource-group "${AZURE_RESOURCE_GROUP}" --query "oidcIssuerProfile.issuerUrl" --output tsv)"
 
